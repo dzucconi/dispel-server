@@ -12,7 +12,7 @@ router.get("/", (req, res, next) => {
 
   const digest = crypto
     .createHash("md5")
-    .update(input)
+    .update(JSON.stringify({ input, voice }))
     .digest("hex");
 
   const key = `${digest}.mp3`;
@@ -23,7 +23,9 @@ router.get("/", (req, res, next) => {
       ({ AudioStream }) => AudioStream
     );
   })
-    .then(url => res.send(`<a href='${url}'>${key}</a>`))
+    .then(url => {
+      res.send(req.xhr ? url : `<a href='${url}'>${key}</a>`);
+    })
     .catch(next);
 });
 

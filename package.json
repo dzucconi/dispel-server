@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./server/bin/www",
+    "start": "node ./src/bin/www",
     "start-dev": "DEBUG=dispel:* yarn start"
   },
   "dependencies": {
     "aws-sdk": "^2.473.0",
+    "cors": "^2.8.5",
     "debug": "~2.6.9",
     "express": "~4.17.1",
     "http-errors": "~1.6.3",

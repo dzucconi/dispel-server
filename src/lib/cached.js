@@ -20,7 +20,6 @@ module.exports = (key, asyncFn, bypass = false) =>
 
         asyncFn()
           .then(body => {
-            console.log(body);
             return s3
               .putObject({
                 Key: key,
