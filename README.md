@@ -1,4 +1,6 @@
 # dispel-server
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdzucconi%2Fdispel-server.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdzucconi%2Fdispel-server?ref=badge_shield)
+
 
 Synthesize speech with AWS Polly. Uses AWS S3 along with object expiration lifecycle rules for caching.
 
@@ -21,3 +23,7 @@ Synthesize speech with AWS Polly. Uses AWS S3 along with object expiration lifec
 | `voice` | Speaker's voice | `enum` - `[Nicole, Enrique, Tatyana, Russell, Lotte, Geraint, Carmen, Mads, Penelope, Mia, Joanna, Matthew, Brian, Seoyeon, Ruben, Ricardo, Maxim, Lea, Giorgio, Carla, Naja, Maja, Astrid, Ivy, Kimberly, Chantal, Amy, Vicki, Marlene, Ewa, Conchita, Karl, Zeina, Miguel, Mathieu, Justin, Lucia, Jacek, Bianca, Takumi, Ines, Gwyneth, Cristiano, Mizuki, Celine, Zhiyu, Jan, Liv, Joey, Raveena, Filiz, Dora, Salli, Aditi, Vitoria, Emma, Hans, Kendra]` |
 
 See [Voices in Amazon Polly](https://docs.aws.amazon.com/polly/latest/dg/voicelist.html) for language breakdown.
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdzucconi%2Fdispel-server.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdzucconi%2Fdispel-server?ref=badge_large)
