@@ -5,7 +5,9 @@ Synthesize speech with AWS Polly. Uses AWS S3 along with object expiration lifec
 ## Meta
 
 * **State**: production
-* **Production**: https://damonzucconi-dispel-production
+* **Production**:
+  * **URL**: http://dispel.services.damonzucconi.com/
+  * **URL**: https://damonzucconi-dispel-production.herokuapp.com/
 
 ## API
 
