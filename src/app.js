@@ -8,9 +8,11 @@ const indexRouter = require("./routes/index");
 
 const app = express();
 
+const allowedOrigins = process.env.ALLOWED_ORIGINS.split(",");
+
 app
   .use(logger("dev"))
-  .use(cors())
+  .use(cors({ ...(allowedOrigins.length ? { origin: allowedOrigins } : {}) }))
   .use(express.json())
   .use(express.urlencoded({ extended: false }))
   .use(express.static(path.join(__dirname, "public")));
