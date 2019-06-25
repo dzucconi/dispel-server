@@ -9,8 +9,7 @@ Synthesize speech with AWS Polly. Uses AWS S3 along with object expiration lifec
   * **URL**: http://dispel.services.damonzucconi.com/
   * **URL**: https://damonzucconi-dispel-production.herokuapp.com/
 * **Host**: https://dashboard.heroku.com/apps/damonzucconi-dispel-production
-* **Deploys**: Merged PRs to `dzucconi/dispel-server#master` are automatically deployed to production. [https://dashboard.heroku.com/apps/damonzucconi-dispel-production/deploy/github](Manually trigger a deploy.)
-
+* **Deploys**: Merged PRs to `dzucconi/dispel-server#master` are automatically deployed to production. [Manually trigger a deploy](https://dashboard.heroku.com/apps/damonzucconi-dispel-production/deploy/github)
 ## API
 
 * **URL**: `/`
