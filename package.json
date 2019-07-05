@@ -9,7 +9,7 @@
   "dependencies": {
     "aws-sdk": "2.473.0",
     "cors": "2.8.5",
-    "debug": "2.6.9",
+    "debug": "4.1.1",
     "express": "4.17.1",
     "http-errors": "1.6.3",
     "morgan": "1.9.1"
