@@ -8,7 +8,11 @@ const cached = require("../lib/cached");
 const router = express.Router();
 
 router.get("/", (req, res, next) => {
-  const { input = "Hello world", voice = "Matthew" } = req.query;
+  const {
+    input = "Hello world",
+    voice = "Matthew",
+    redirect = false
+  } = req.query;
 
   const digest = crypto
     .createHash("md5")
@@ -24,7 +28,11 @@ router.get("/", (req, res, next) => {
       ({ AudioStream }) => AudioStream
     );
   })
-    .then(url => res.send(req.xhr ? url : `<a href='${url}'>${key}</a>`))
+    .then(url => {
+      redirect
+        ? res.redirect(url)
+        : res.send(req.xhr ? url : `<a href='${url}'>${key}</a>`);
+    })
     .catch(next);
 });
 
