@@ -18,13 +18,45 @@ Synthesize speech with AWS Polly. Uses AWS S3 along with object expiration lifec
 - **URL**: `/`
 - **Method**: `GET`
 
-| Param      | Description     | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| ---------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `input`    | Text to speak   | `string`                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| `redirect` | Redirect to mp3 | `boolean`                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `voice`    | Speaker's voice | `enum` - `[Nicole, Enrique, Tatyana, Russell, Lotte, Geraint, Carmen, Mads, Penelope, Mia, Joanna, Matthew, Brian, Seoyeon, Ruben, Ricardo, Maxim, Lea, Giorgio, Carla, Naja, Maja, Astrid, Ivy, Kimberly, Chantal, Amy, Vicki, Marlene, Ewa, Conchita, Karl, Zeina, Miguel, Mathieu, Justin, Lucia, Jacek, Bianca, Takumi, Ines, Gwyneth, Cristiano, Mizuki, Celine, Zhiyu, Jan, Liv, Joey, Raveena, Filiz, Dora, Salli, Aditi, Vitoria, Emma, Hans, Kendra]` |
+| Param      | Description     | Type               |
+| ---------- | --------------- | ------------------ |
+| `input`    | Text to speak   | `string`           |
+| `redirect` | Redirect to mp3 | `boolean`          |
+| `voice`    | Speaker's voice | `enum` (see below) |
 
-See [Voices in Amazon Polly](https://docs.aws.amazon.com/polly/latest/dg/voicelist.html) for language breakdown.
+| Language                      | Female Names/ID                       | Male Names/ID         |
+| ----------------------------- | ------------------------------------- | --------------------- |
+| Arabic (arb)                  | Zeina                                 |                       |
+| Chinese, Mandarin (cmn-CN)    | Zhiyu                                 |                       |
+| Danish (da-DK)                | Naja                                  | Mads                  |
+| Dutch (nl-NL)                 | Lotte                                 | Ruben                 |
+| English, Australian (en-AU)   | Nicole                                | Russell               |
+| English, British (en-GB)      | Amy, Emma                             | Brian                 |
+| English, Indian (en-IN)       | Aditi (bilingual with Hindi), Raveena |                       |
+| English, US (en-US)           | Ivy, Joanna, Kendra, Kimberly, Salli  | Joey, Justin, Matthew |
+| English, Welsh (en-GB-WLS)    |                                       | Geraint               |
+| French (fr-FR)                | Céline/Celine, Léa                    | Mathieu               |
+| French, Canadian (fr-CA)      | Chantal                               |                       |
+| German (de-DE)                | Marlene, Vicki                        | Hans                  |
+| Hindi (hi-IN)                 | Aditi (bilingual with Indian English) |                       |
+| Icelandic (is-IS)             | Dóra/Dora                             | Karl                  |
+| Italian (it-IT)               | Carla, Bianca                         | Giorgio               |
+| Japanese (ja-JP)              | Mizuki                                | Takumi                |
+| Korean (ko-KR)                | Seoyeon                               |                       |
+| Norwegian (nb-NO)             | Liv                                   |                       |
+| Polish (pl-PL)                | Ewa, Maja                             | Jacek, Jan            |
+| Portuguese, Brazilian (pt-BR) | Vitória/Vitoria                       | Ricardo               |
+| Portuguese, European (pt-PT)  | Inês/Ines                             | Cristiano             |
+| Romanian (ro-RO)              | Carmen                                |                       |
+| Russian (ru-RU)               | Tatyana                               | Maxim                 |
+| Spanish, European (es-ES)     | Conchita, Lucia                       | Enrique               |
+| Spanish, Mexican (es-MX)      | Mia                                   |                       |
+| Spanish, US (es-US)           | Penélope/Penelope                     | Miguel                |
+| Swedish (sv-SE)               | Astrid                                |                       |
+| Turkish (tr-TR)               | Filiz                                 |                       |
+| Welsh (cy-GB)                 | Gwyneth                               |                       |
+
+See [Voices in Amazon Polly](https://docs.aws.amazon.com/polly/latest/dg/voicelist.html) for more information.
 
 ## License
 
