@@ -13,7 +13,7 @@ Synthesize speech with AWS Polly. Uses AWS S3 along with object expiration lifec
 - **Host**: https://dashboard.heroku.com/apps/damonzucconi-dispel-production
 - **Deploys**: Merged PRs to `dzucconi/dispel-server#master` are automatically deployed to production. [Manually trigger a deploy](https://dashboard.heroku.com/apps/damonzucconi-dispel-production/deploy/github)
 
-## API
+## Parameters
 
 - **URL**: `/`
 - **Method**: `GET`
@@ -23,6 +23,8 @@ Synthesize speech with AWS Polly. Uses AWS S3 along with object expiration lifec
 | `input`    | Text to speak   | `string`           |
 | `redirect` | Redirect to mp3 | `boolean`          |
 | `voice`    | Speaker's voice | `enum` (see below) |
+
+### Voices
 
 | Language                      | Female Names/ID                       | Male Names/ID         |
 | ----------------------------- | ------------------------------------- | --------------------- |
