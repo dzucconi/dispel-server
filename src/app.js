@@ -3,12 +3,14 @@ const express = require("express");
 const path = require("path");
 const cors = require("cors");
 const logger = require("morgan");
+const error = require("debug")("dispel:error");
 
 const indexRouter = require("./routes/index");
 
 const app = express();
 
-const allowedOrigins = process.env.ALLOWED_ORIGINS.split(",");
+const { ALLOWED_ORIGINS } = process.env;
+const allowedOrigins = (ALLOWED_ORIGINS && ALLOWED_ORIGINS.split(",")) || [];
 
 app
   .use(logger("dev"))
@@ -26,6 +28,8 @@ app.use((_req, _res, next) => {
 
 // Error handler
 app.use((err, req, res, _next) => {
+  error(err);
+
   // Set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get("env") === "development" ? err : {};

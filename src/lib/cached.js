@@ -11,14 +11,15 @@ const s3 = new AWS.S3({
 const qualifiedUrl = key =>
   `https://${process.env.AWS_S3_BUCKET}.s3.amazonaws.com/${key}`;
 
-module.exports = (key, asyncFn, bypass = false) =>
+module.exports = (key, asyncFn, bypass = true) =>
   new Promise((resolve, reject) => {
+    info(`Checking ${key}`);
+
     s3.headObject({ Key: key }, err => {
       if (bypass || (err && err.code === "NotFound")) {
         info(bypass ? "Bypassing cache" : `Cache miss: ${key}`);
-        info(`Writing "${key}"`);
 
-        asyncFn()
+        return asyncFn()
           .then(body => {
             return s3
               .putObject({
@@ -34,10 +35,16 @@ module.exports = (key, asyncFn, bypass = false) =>
             info(`Wrote ${key}`);
             return resolve(qualifiedUrl(key));
           })
-          .catch(reject);
-      } else {
-        info(`Cache hit: ${key}`);
-        return resolve(qualifiedUrl(key));
+          .catch(err => {
+            return reject(err);
+          });
       }
+
+      if (err) {
+        return reject(err);
+      }
+
+      info(`Cache hit: ${key}`);
+      return resolve(qualifiedUrl(key));
     });
   });
