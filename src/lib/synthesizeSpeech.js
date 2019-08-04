@@ -13,6 +13,7 @@ module.exports = ({
   return new Promise((resolve, reject) => {
     polly.synthesizeSpeech(
       {
+        Engine: "neural",
         OutputFormat: "mp3",
         SampleRate: "16000",
         Text: input,

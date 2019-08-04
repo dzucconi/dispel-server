@@ -18,11 +18,13 @@ Synthesize speech with AWS Polly. Uses AWS S3 along with object expiration lifec
 - **URL**: `/`
 - **Method**: `GET`
 
-| Param      | Description     | Type               |
-| ---------- | --------------- | ------------------ |
-| `input`    | Text to speak   | `string`           |
-| `redirect` | Redirect to mp3 | `boolean`          |
-| `voice`    | Speaker's voice | `enum` (see below) |
+| Param      | Description                            | Type                   | Default         |
+| ---------- | -------------------------------------- | ---------------------- | --------------- |
+| `input`    | Text to speak                          | `string`               | `"Hello world"` |
+| `redirect` | Redirect to mp3                        | `boolean`              | `false`         |
+| `voice`    | Speaker's voice                        | `enum` (see below)     | `"Matthew"`     |
+| `mode`     | Mode (if `ssml` input must be encoded) | `"text"\|"ssml"`       | `"text"`        |
+| `engine`   | Speech engine                          | `"standard"\|"neural"` | `"standard"`    |
 
 ### Voices
 
@@ -59,6 +61,30 @@ Synthesize speech with AWS Polly. Uses AWS S3 along with object expiration lifec
 | Welsh (cy-GB)                 | Gwyneth                               |                       |
 
 See [Voices in Amazon Polly](https://docs.aws.amazon.com/polly/latest/dg/voicelist.html) for more information.
+
+- **URL**: `/status`
+- **Method**: `GET`
+
+Returns 200 OK if system is up.
+
+- **URL**: `/voices`
+- **Method**: `GET`
+
+Returns an array of available voices:
+
+```json
+[
+  {
+    "Gender": "Female",
+    "Id": "Lotte",
+    "LanguageCode": "nl-NL",
+    "LanguageName": "Dutch",
+    "Name": "Lotte",
+    "SupportedEngines": ["standard"]
+  }
+  // ...
+]
+```
 
 ## License
 
