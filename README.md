@@ -60,7 +60,7 @@ Synthesize speech with AWS Polly. Uses AWS S3 along with object expiration lifec
 | Turkish (tr-TR)               | Filiz                                 |                       |
 | Welsh (cy-GB)                 | Gwyneth                               |                       |
 
-## See [Voices in Amazon Polly](https://docs.aws.amazon.com/polly/latest/dg/voicelist.html) for more information.
+See [Voices in Amazon Polly](https://docs.aws.amazon.com/polly/latest/dg/voicelist.html) for more information.
 
 ---
 
