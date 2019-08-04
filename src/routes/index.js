@@ -39,7 +39,7 @@ router
   })
 
   .get("/status", (_req, res) => {
-    res.res.sendStatus(200);
+    res.sendStatus(200);
   })
 
   .get("/voices", (req, res, next) => {
