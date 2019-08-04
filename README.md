@@ -60,12 +60,16 @@ Synthesize speech with AWS Polly. Uses AWS S3 along with object expiration lifec
 | Turkish (tr-TR)               | Filiz                                 |                       |
 | Welsh (cy-GB)                 | Gwyneth                               |                       |
 
-See [Voices in Amazon Polly](https://docs.aws.amazon.com/polly/latest/dg/voicelist.html) for more information.
+## See [Voices in Amazon Polly](https://docs.aws.amazon.com/polly/latest/dg/voicelist.html) for more information.
+
+---
 
 - **URL**: `/status`
 - **Method**: `GET`
 
 Returns 200 OK if system is up.
+
+---
 
 - **URL**: `/voices`
 - **Method**: `GET`
@@ -85,7 +89,3 @@ Returns an array of available voices:
   // ...
 ]
 ```
-
-## License
-
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdzucconi%2Fdispel-server.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdzucconi%2Fdispel-server?ref=badge_large)
