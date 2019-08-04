@@ -6,14 +6,15 @@ const polly = new AWS.Polly({ apiVersion: "2016-06-10" });
 module.exports = ({
   input = "hello world",
   voice = "Matthew",
-  mode = "text"
+  mode = "text",
+  engine
 }) => {
   info(`Synthesizing "${input} (voice: ${voice}, mode: ${mode})"`);
 
   return new Promise((resolve, reject) => {
     polly.synthesizeSpeech(
       {
-        Engine: "neural",
+        Engine: engine,
         OutputFormat: "mp3",
         SampleRate: "16000",
         Text: input,
