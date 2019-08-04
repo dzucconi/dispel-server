@@ -86,6 +86,5 @@ Returns an array of available voices:
     "Name": "Lotte",
     "SupportedEngines": ["standard"]
   }
-  // ...
 ]
 ```
