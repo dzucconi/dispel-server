@@ -32,7 +32,7 @@ router
     })
       .then(url => {
         redirect
-          ? res.redirect(url)
+          ? res.redirect(301, url)
           : res.send(req.xhr ? url : `<a href='${url}'>${key}</a>`);
       })
       .catch(next);
