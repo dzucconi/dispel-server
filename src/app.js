@@ -10,7 +10,10 @@ const indexRouter = require("./routes/index");
 const app = express();
 
 const { ALLOWED_ORIGINS } = process.env;
-const allowedOrigins = (ALLOWED_ORIGINS && ALLOWED_ORIGINS.split(",")) || [];
+const allowedOrigins = (
+  (ALLOWED_ORIGINS && ALLOWED_ORIGINS.split(",")) ||
+  []
+).map(string => new RegExp(string));
 
 app
   .use(logger("dev"))
