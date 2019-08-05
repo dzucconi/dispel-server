@@ -11,7 +11,7 @@ const s3 = new AWS.S3({
 const qualifiedUrl = key =>
   `https://${process.env.AWS_S3_BUCKET}.s3.amazonaws.com/${key}`;
 
-module.exports = (key, asyncFn, bypass = true) =>
+module.exports = (key, asyncFn, bypass = false) =>
   new Promise((resolve, reject) => {
     info(`Checking ${key}`);
 
