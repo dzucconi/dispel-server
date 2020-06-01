@@ -15,12 +15,12 @@ array-flatten@1.1.1:
   resolved "https://registry.yarnpkg.com/array-flatten/-/array-flatten-1.1.1.tgz#9a5f699051b1e7073328f2a008968b64ea2955d2"
   integrity sha1-ml9pkFGx5wczKPKgCJaLZOopVdI=
 
-aws-sdk@2.686.0:
-  version "2.686.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.686.0.tgz#c58c3874eff4c76c763d137df617e87971321eb7"
-  integrity sha512-QhYhJ5y8tUG5SlmY3CSf9RBaa3EFbta28oarOyiwceHKmY80cMCafRI1YypT6CVDx/q91dbnSNQfWhs0cZPbBQ==
+aws-sdk@2.687.0:
+  version "2.687.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.687.0.tgz#664019f43a697b9697a5b90789a5ecbbb9e2b90f"
+  integrity sha512-gUIL4YXWdg3dv1QJMs0PCLpaHRe4DtPIYgRh3PPLJHnbIETLQdiA98co6qthAXIIWKx2hET4d1BhnAlAp77zQw==
   dependencies:
-    buffer "4.9.1"
+    buffer "4.9.2"
     events "1.1.1"
     ieee754 "1.1.13"
     jmespath "0.15.0"
@@ -58,10 +58,10 @@ body-parser@1.19.0:
     raw-body "2.4.0"
     type-is "~1.6.17"
 
-buffer@4.9.1:
-  version "4.9.1"
-  resolved "https://registry.yarnpkg.com/buffer/-/buffer-4.9.1.tgz#6d1bb601b07a4efced97094132093027c95bc298"
-  integrity sha1-bRu2AbB6TvztlwlBMgkwJ8lbwpg=
+buffer@4.9.2:
+  version "4.9.2"
+  resolved "https://registry.yarnpkg.com/buffer/-/buffer-4.9.2.tgz#230ead344002988644841ab0244af8c44bbe3ef8"
+  integrity sha512-xq+q3SRMOxGivLhBNaUdC64hDTQwejJ+H0T/NB1XMtTVEwNTrfFF3gAxiyW0Bu/xWEGhjVKgUcMhCrUy2+uCWg==
   dependencies:
     base64-js "^1.0.2"
     ieee754 "^1.1.4"
